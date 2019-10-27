@@ -271,8 +271,8 @@ int main()
 	}
 
 	else if(choice==2){
+		int encriptcount=0;
 		for (int i = 0; i < msgLengthAfterPadding; i += 16) {
-			int encriptcount=0;
 			if(i==0) AESencrypt(paddedMessage+i, expandedKey, encryptedMessage+i);
 			else{ for(int j=i,k=0;k<16;j++,k++){
 					paddedMessage[j]=paddedMessage[j] ^ encryptedMessage[encriptcount];
